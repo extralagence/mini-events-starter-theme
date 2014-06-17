@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Private exporter"
+AuthUserFile F:\wamp\www\www.mycorpevent.com\mini\export\.htpasswd
+Require valid-user

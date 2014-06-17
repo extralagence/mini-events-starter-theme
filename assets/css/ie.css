@@ -1,0 +1,44 @@
+
+/*********************
+ *
+ * CLEANER
+ * 
+ ********************/   
+#main {
+	zoom:1;
+}      
+#footer .navigation li {
+	display: inline;  
+	zoom:1;
+}
+#form p {
+	width:auto;
+	max-width:auto;
+	display: block; 
+	border: 1px solid #CCCCCC;
+} 
+#form p.error,
+#form p.inline {
+	border: 0px none; 
+} 
+#form p label { 
+	width:30%;
+	max-width:auto;
+	height:auto;
+	display: inline;
+	zoom:1;           
+	line-height:24px;
+	white-space: normal;
+}        
+#form p input {
+	width:60%;  
+	display: inline;
+	zoom:1;  
+	border: 0px none; 
+}    
+#submit {
+	text-transform: uppercase;
+}
+hr {
+	visibility: hidden;
+}

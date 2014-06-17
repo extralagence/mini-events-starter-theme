@@ -1,0 +1,599 @@
+@font1 : georgia, sans-serif;
+@font2 : "Franklin Gothic Compressed", sans-serif;
+@white : #FFFFFF;
+@black : #606060;
+@dark : #202020;
+@grey : #808080;
+
+// THEME COLOR VARS
+@highlight : #00546d;
+@color_base : #00546d;
+@color_hover : #5d0135;
+@color_grey : #606060;
+@color_background : #f4f2f0;
+
+@color_border : #aac2c8;
+@color_title : @color_hover;
+@color_link : @color_base;
+
+@base_url : '/www.mycorpevent.com/mini';
+
+.background-radial(@colour) {
+	@start: lighten(@colour, 10%);
+	@end: darken(@colour, 5%);
+	background: @colour;
+	filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end})',GradientType=1 )";
+	background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end));
+	background: -webkit-linear-gradient(@start, @end);
+	background: -moz-linear-gradient(@start, @end);
+	background: -o-linear-gradient(@start, @end);
+	background: -ms-linear-gradient(@start, @end);
+	background: linear-gradient(@start, @end);
+}
+
+
+/*********************
+ *
+ * FONTS
+ *
+ ********************/
+@font-face {
+	font-family: "Franklin Gothic Compressed";
+	src:  url("@{base_url}/assets/fonts/franklin.eot");
+	src:  url("@{base_url}/assets/fonts/franklin.eot?#iefix") format("embedded-opentype"),
+				 url("@{base_url}/assets/fonts/franklin.woff") format("woff"),
+				 url("@{base_url}/assets/fonts/franklin.ttf") format("truetype"),
+				 url("@{base_url}/assets/fonts/franklin.svg#franklin") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+/*********************
+ *
+ * GLOBAL
+ *
+ ********************/
+*,
+*:before,
+*:after {
+	margin: 0px;
+	padding: 0px;
+	border: 0px none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	background: @color_background url("@{base_url}/assets/img/visu/background.jpg") top center repeat-x;
+	color: #606060;
+	font-family: Georgia, serif;
+	font-size: 14px;
+	margin: 0;
+}
+
+#wrapper {
+	background: @color_background;
+	margin: auto;
+	position: relative;
+	z-index: 1;
+	width: 960px;
+	min-height: 100%;
+	padding-top: 50px;
+}
+
+/*********************
+ *
+ * MAIN
+ *
+ ********************/
+#global {
+	width: 960px;
+	margin:auto;
+}
+/*********************
+ *
+ * ARROW
+ *
+ ********************/
+#alertArrow {
+	display: block;
+	position: fixed;
+	top:50%; left:50%;
+	margin: -60px 0 0 -60px;
+	z-index: 30;
+}
+/*********************
+ *
+ * HEADER
+ *
+ ********************/
+#header {
+	margin: 0;
+	position: relative;
+	z-index: 1;
+	height: 220px;
+}
+#header > * {
+	color: @color_background;
+}
+#header .content {
+	background: transparent url("@{base_url}/assets/img/visu/logo.png") top center no-repeat;
+	content: "";
+	display: block;
+	height: 100%;
+}
+/*********************
+ *
+ * MAIN
+ *
+ ********************/
+#main {
+	margin-bottom: 100px;
+	position: relative;
+	z-index: 10;
+}
+/*********************
+ *
+ * CONTENT
+ *
+ ********************/
+#content {
+	width: 460px;
+	float: left;
+	margin: 0 70px 20px 20px;
+}
+.content {
+	font-size: 14px;
+	color: #505050;
+	line-height: 20px;
+}
+.content h2, h2 {
+	color: @color_hover;
+	font-family: @font2;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 25px;
+	text-transform: uppercase;
+
+	border-bottom: 1px solid @color_border;
+	margin: 40px 0 10px;
+	padding-bottom: 4px;
+}
+.content h3 {
+	color: @color_base;
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+
+.content h4.first {
+	margin: -4px 0 4px 0;
+}
+.content h4 {
+	margin: 15px 0 4px 0;
+	font-size: 20px;
+	color: @color_hover;
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+}
+.content .button {
+	.background-radial(@color_base);
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-family: Georgia, serif;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 20px;
+	padding: 5px 20px;
+	text-decoration: none;
+	text-align: center;
+}
+.content .button:hover {
+	.background-radial(@color_hover);
+	color: #FFFFFF;
+}
+
+.content .button.pictures {
+	display: block;
+	margin: 5px auto;
+	width: 220px;
+}
+
+
+.content hr, hr {
+	margin: 20px 0;
+	height: 15px;
+	width: 100%;
+	background: transparent url("@{base_url}/assets/img/visu/shadow-horizontal.png") 0 bottom no-repeat;
+	background-size: contain;
+	border: none;
+}
+
+.content strong {
+	color: @dark;
+	font-weight: normal;
+}
+.content .links {
+	font-size: 12px;
+}
+.fancybox-inner .content {
+	padding: 20px;
+}
+.fancybox-inner .content p {
+	margin: 5px 0 10px 0;
+}
+
+.content ul {
+	margin-left: 25px;
+	padding: 0;
+}
+.content ol {
+	margin-left: 30px;
+	padding: 0;
+}
+.content ul li {
+	list-style: none;
+	margin-bottom: 3px;
+	text-indent: -14px;
+}
+.content ul li:before {
+	color: @color_base;
+	content: "\2022";
+	display: inline-block;
+	font-size: 11px;
+	margin-right: 10px;
+	text-indent: 0;
+	vertical-align: 1px;
+	width: 5px;
+}
+/*********************
+ *
+ * ALERT
+ *
+ ********************/
+.notification {
+	height: 100px;
+	color: #e2001a;
+}
+.notification > h2 {
+	margin: 40px 0 0;
+	color: #e2001a;
+}
+.notification > p {
+	font-size: 16px;
+	font-weight: normal;
+	font-family: @font1;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.notification.valid, .notification.valid > h2 {
+	color: #2b8229;
+}
+/*********************
+ *
+ * CONTENT RIGHT
+ *
+ ********************/
+.content-right {
+	width: 390px;
+	float: left;
+	padding: 0;
+}
+
+/*********************
+ *
+ * FORM
+ *
+ ********************/
+input[type="search"], input[type="email"], input[type="text"], input[type="submit"] {
+	-webkit-appearance: initial;
+}
+
+#form {
+	position: relative;
+}
+#form .velov {
+	background: transparent url("@{base_url}/assets/img/visu/hr-rouge.png") 0 center no-repeat;
+	margin-bottom: 10px;
+	position: relative;
+	z-index:3;
+	text-align: center;
+}
+#form form {
+	position: relative;
+	z-index:2;
+}
+#form p {
+	margin: 20px;
+}
+#form span.error {
+	display:inline-block;
+	width: auto;
+	color: #e2001a;
+	border: 0px none;
+}
+#form label {
+	color: @dark;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	width: auto;
+	float: none;
+}
+
+#form p input,
+#form p select {
+	color: #38302b;
+	border: 1px solid @color_border;
+	display: block;
+	font-size: 14px;
+	font-family: Georgia, serif;
+	line-height: 30px;
+	vertical-align: middle;
+	width: 295px;
+	height: 30px;
+	padding: 0;
+	margin: 0;
+}
+#form p input {
+	padding: 0 0 0 5px;
+}
+
+
+#form p input:focus,
+#form p select:focus {
+	border-color: #38302b;
+}
+#form p .inline {
+	display: inline-block;
+	width:auto;
+	margin: 0px 10px;
+	font-weight: normal;
+	font-family: Arial, sans-serif;
+	color: #505050;
+	font-size: 13px;
+	line-height: 22px;
+	vertical-align: middle;
+	background-color: transparent;
+	position: relative;
+	top:3px;
+	border:0px none;
+	padding: 0;
+}
+#form p input.inline {
+	margin-right:5px;
+}
+#form p label.inline {
+	margin-left:0px;
+}
+
+#form textarea {
+	color: #38302b;
+	border: 1px solid @color_border;
+	font-size: 14px;
+	font-family: Georgia, serif;
+	line-height: 20px;
+	width: 100%;
+	height: 100px;
+	padding: 0 0 0 5px;
+}
+
+#form #submit {
+	display: block;
+	margin: 0 0 20px 20px;
+}
+
+/*********************
+ *
+ * FIELDSET
+ *
+ ********************/
+#form fieldset {
+	background: #ece8e6;
+	margin: 25px 0;
+	margin-bottom: 50px;
+	overflow: auto;
+	padding: 0px;
+	border: none;
+	width: 100%;
+}
+#form fieldset legend  {
+	background: @color_background;
+	border-bottom: 1px solid @color_border;
+	display: block;
+	color: @color_grey;
+	font-family: Georgia;
+	font-size: 18px;
+	font-style: italic;
+	float: none;
+	line-height: 40px;
+	width: 100%;
+	height: 40px;
+	padding: 0;
+}
+
+/*********************
+ *
+ * RADIO
+ *
+ ********************/
+.extra-radio > input[type="radio"],
+.extra-checkbox > input[type="checkbox"] {
+	cursor: pointer;
+	opacity: 0;
+	width: 30px;
+	height: 30px;
+	margin-right: 3px;
+}
+.extra-radio,
+.extra-checkbox {
+	background: transparent url("@{base_url}/assets/img/visu/sprite.png") 0 0 no-repeat;
+	display:inline-block;
+	vertical-align: -10px;
+	width: 30px;
+	height: 30px;
+}
+.extra-checkbox.focus {
+	background-position: 0 -30px;
+}
+.extra-radio {
+	background-position: 0 -120px;
+}
+.extra-radio.focus {
+	background-position: 0 -150px;
+}
+.checked {
+	background-position: 0 -60px;
+}
+.checked.focus {
+	background-position: 0 -90px;
+}
+.selected {
+	background-position: 0 -180px;
+}
+.selected.focus {
+	background-position: 0 -210px;
+}
+
+#form .checkbox-field > label {
+	display: inline-block;
+}
+
+/*********************
+ *
+ * SLIDER
+ *
+ ********************/
+#form .input-slider .slider-wrapper {
+	width: 295px;
+	height: 30px;
+	display: block;
+	margin: -10px 0 10px;
+}
+
+#form .input-slider .slider-inner-wrapper {
+	width: 235px;
+	height: 30px;
+	display: inline-block;
+	padding: 16px 20px 0 15px;
+}
+
+#form .input-slider .slider {
+	background: #38302b;
+	border: 0px none;
+	display: block;
+	margin: 10px 0;
+	width: 100%;
+	height: 1px;
+	position: relative;
+}
+#form .input-slider .ui-slider-handle {
+	background: transparent url("@{base_url}/assets/img/visu/sprite.png") 0 -180px no-repeat;
+	border: 0px none;
+	cursor: pointer;
+	display: block;
+	margin-left: -15px;
+	position: absolute;
+	top: -15px;
+	width: 30px;
+	height: 30px;
+}
+#form .input-slider .ui-slider-handle.ui-state-hover {
+	background-position: 0 -210px;
+}
+#form .input-slider .ui-slider-handle.ui-state-active {
+	background-position: 0 -240px;
+}
+
+#form .input-slider input {
+	display: inline-block;
+	text-align: center;
+	width: 60px;
+}
+
+
+/*********************
+ *
+ * SLIDER
+ *
+ ********************/
+#form p > select, #form-content p > select * {
+	cursor: pointer;
+	padding: 5px;
+}
+
+/*********************
+ *
+ * RADIOGROUP
+ *
+ ********************/
+#form .radio-label {
+	display: inline-block;
+}
+
+
+/*********************
+ *
+ * FOOTER
+ *
+ ********************/
+#footer {
+	background: transparent url("@{base_url}/assets/img/visu/shadow-footer.png") top center no-repeat;
+	margin-top: 50px;
+	padding-top: 20px;
+}
+/* FOOTER */
+#footer > .wrapper {
+	color: @grey;
+	font-size: 12px;
+	padding: 15px;
+	margin: auto;
+	text-align: center;
+	width: 960px;
+}
+
+body .ui-datepicker {
+	z-index: 10 !important;
+}
+/*********************
+ *
+ * CLEANER
+ *
+ ********************/
+#main:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/**********
+ *IE ALL
+ * *******/
+input[type="radio"],
+input[type="checkbox"] {
+	-ms-filter: "alpha(opacity=0)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+/**********
+ *IE7
+ * *******/
+.lte7 .extra-radio,
+.lte7 .extra-checkbox,
+.lte7 #extra-booking-content .input-radio .input-group > label,
+.lte7 #extra-booking-content .input-checkbox > label,
+.lte7 #extra-booking-content .input-date .input,
+.lte7 #extra-booking-content .input-date .ui-datepicker-trigger,
+.lte7 #extra-booking-content .input-slider .slider,
+.lte7 #extra-booking-content .input-slider .input {
+	display: inline;
+	zoom: 1;
+}
